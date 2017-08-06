@@ -39,5 +39,5 @@ end
 post '/name' do
 	f_name = params[:f_name]
 	l_name = params[:l_name]
-	redirect '/thework?f_name=' + f_name + '&l_name=' + l_name
+	redirect '/change?f_name=' + f_name + '&l_name=' + l_name
 end
