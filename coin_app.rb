@@ -41,3 +41,26 @@ post '/name' do
 	l_name = params[:l_name]
 	redirect '/change?f_name=' + f_name + '&l_name=' + l_name
 end
+ 
+get '/change' do
+ f_name = params[:f_name]
+ l_name = params[:l_name]
+ erb :changepart, locals:{f_name:f_name,l_name:l_name}
+end
+
+post '/change' do
+	f_name = params[:f_name]
+	l_name = params[:l_name]
+	monies = params[:monies]
+	redirect '/changeup?monies=' + monies + '&f_name=' + f_name + '&l_name=' + l_name
+end
+
+get '/changeup' do
+	f_name = params[:f_name]
+	l_name = params[:l_name]
+	monies = params[:monies]
+
+end
+get '/what' do
+	erb :what 
+end
