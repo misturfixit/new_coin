@@ -1,9 +1,27 @@
-	 <h1>Your Change <%=n1%><%=n2%><%=n3%><%=n4%><%=f_name%><%=l_name%>
+	 <p class="change">Your Change for<%=monies%>cents<br>
+	 is
+	 
+<%if n4[0].to_i == 0%><br> 
+<%else%>
+<%=n4%>
+<%end%>
+<%if n3[0].to_i == 0%><br>
+<%else%>
+<%=n3%>
+<%end%>
+<%if n2[0] == 0.to_s%><br>
+<%else%>
+<%=n2%>
+<%end%>
+<%if n1[0] == "0"%><br> 
+<%else%>
+<%=n1%>
+<%end%>
+</p>
 
- 
 <form method="post" action="back">
 	<input type="hidden" name="f_name" value="<%=f_name%>">
 	<input type="hidden" name="l_name" value="<%=l_name%>">
-
+	
 	<input type="submit" value="Again?">
 </form>

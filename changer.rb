@@ -10,7 +10,7 @@ def changeup(monies)
 	until (monies == 0)  do
 
 	 
-
+monies
 	if monies >= change[:qtr] 
 			monies -= 25
 		act_chnge[:quarter] += 1
@@ -32,13 +32,13 @@ def changeup(monies)
  act_chnge
 end
 
-def hash_smasher(key,value)
-	"#{key}: #{value}"
+def hashsmasher(key, value)
+	"#{value} #{key}"
+
 end
 
-def seperate(arr)
+def separate(arr)
 	if arr.any?
 		arr.pop
 	end
 end
-			
