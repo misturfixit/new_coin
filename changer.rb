@@ -31,3 +31,14 @@ def changeup(monies)
   end
  act_chnge
 end
+
+def hash_smasher(key,value)
+	"#{key}: #{value}"
+end
+
+def seperate(arr)
+	if arr.any?
+		arr.pop
+	end
+end
+			

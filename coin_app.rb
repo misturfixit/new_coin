@@ -59,6 +59,22 @@ get '/changeup' do
 	f_name = params[:f_name]
 	l_name = params[:l_name]
 	monies = params[:monies]
+	moneyhash = changeup(monies.to_i)
+	monarr = []
+		moneyhash.each do |key,value|
+			monarr << hashsmasher(key,value)
+		end
+		
+n1 = separate(monarr)
+n2 = separate(monarr)
+n3 = separate(monarr)
+n4 = separate(monarr)
+
+
+get '/back' do
+	f_name = params[:f_name]
+	l_name = params[:l_name]
+	redirect '/change?f_name=' + f_name + '&l_name=' + l_name
 
 end
 get '/what' do
