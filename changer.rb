@@ -1,6 +1,3 @@
-
-
-
 def changeup(monies)
 
 	act_chnge = {quarters: 0, dimes: 0, nickel: 0, pennies: 0}	
@@ -8,8 +5,7 @@ def changeup(monies)
 	change = {qtr: 25, dim: 10, nikk: 5, pen: 1}		
 
 	until (monies == 0)  do
-
-	 
+		
 monies
 	if monies >= change[:qtr] 
 			monies -= 25
@@ -35,7 +31,7 @@ end
 
 
 def hashsmasher(myhash)
-	change = ""
+	change = " "
 	myhash.each do |key, value|
 		if key == :quarters && value ==1
 			key = :quarter

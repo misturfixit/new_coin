@@ -4,28 +4,28 @@ function ran(){
     	"/photos/vulcan.jpg",
     	"/photos/paint1.jpg",
     	"/photos/paint2.jpg");
-    var body = document.getElementsByTagName('body')[0];
-		document.body.style.background = 'url("/photos/paint1.jpg")';
+    var count = Math.floor(Math.random() * picturearray.length)
+		document.body.style.backgroundImage = "url(" + picturearray[count] +")";
 }
 
 </script>	 
 <html>
 
-	 <p class="change">Your Change for  <%=monies%>  is<br>
+	 <h2 class="change">Your Change for  <%=monies%>  is<br>
 	 is
-	 <%=upd_hash%>
+	 <%=upd_hash%></h2>
 
 <body onload = "ran()">
 
 	<%=f_name%> <%=l_name%> 
 
- 
+ <button>  onclick="ran()" value="CHANGE B/G"</button>
 
-  <form method="post" action="back"> 
+<form method="post" action="back"> 
 	<input type="hidden" name="f_name" value="<%=f_name%>">
 	<input type="hidden" name="l_name" value="<%=l_name%>">
-	
 	<input type="submit" value="Again?">
 </form>
+
 </body>
 </html>
