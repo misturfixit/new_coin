@@ -1,31 +1,25 @@
 <script>
-function rando() {
-  alert("Im right heeeree")
-    var picturearray = ["photos/mossy.jpg", "photos/vulcan.jpg", "photos/paint1.jpg", "photos/paint2.jpg"];
-    // var body = document.getElementsByTagName('body')[0];
-document.body.style.backgroundImage = 'url('photos/paint2.jpg')';
-
+function ran(){
+    var picturearray = new Array("/photos/mossy.jpg",
+    	"/photos/vulcan.jpg",
+    	"/photos/paint1.jpg",
+    	"/photos/paint2.jpg");
+    var body = document.getElementsByTagName('body')[0];
+		document.body.style.background = 'url("/photos/paint1.jpg")';
 }
+
 </script>	 
 <html>
 
-	 <p class="change">Your Change for  <%=monies%>  cents<br>
+	 <p class="change">Your Change for  <%=monies%>  is<br>
 	 is
 	 <%=upd_hash%>
 
+<body onload = "ran()">
 
-<form method="post" action="back">
 	<%=f_name%> <%=l_name%> 
 
-  
-
-
-
-
-
-
-<body onload = "rando()">
-
+ 
 
   <form method="post" action="back"> 
 	<input type="hidden" name="f_name" value="<%=f_name%>">

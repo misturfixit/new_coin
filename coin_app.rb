@@ -56,14 +56,14 @@ get '/back' do
 	f_name = params[:f_name]
 	l_name = params[:l_name]
 	monies = params[:monies]
-	
+	date = params[:new_date]
 	redirect '/change?f_name=' + f_name + '&l_name=' + l_name
 end
 
 post '/back' do
 	f_name = params[:f_name]
 	l_name = params[:l_name]
-	date = params[:date]
+	date = params[:new_date]
 	redirect '/change?f_name=' + f_name + '&l_name=' + l_name
 end
 get '/what' do
