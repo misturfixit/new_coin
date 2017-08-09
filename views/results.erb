@@ -1,27 +1,37 @@
-	 <p class="change">Your Change for<%=monies%>cents<br>
+<script>
+function rando() {
+  alert("Im right heeeree")
+    var picturearray = ["photos/mossy.jpg", "photos/vulcan.jpg", "photos/paint1.jpg", "photos/paint2.jpg"];
+    // var body = document.getElementsByTagName('body')[0];
+document.body.style.backgroundImage = 'url('photos/paint2.jpg')';
+
+}
+</script>	 
+<html>
+
+	 <p class="change">Your Change for  <%=monies%>  cents<br>
 	 is
-	 
-<%if n4[0].to_i == 0%><br> 
-<%else%>
-<%=n4%>
-<%end%>
-<%if n3[0].to_i == 0%><br>
-<%else%>
-<%=n3%>
-<%end%>
-<%if n2[0] == 0.to_s%><br>
-<%else%>
-<%=n2%>
-<%end%>
-<%if n1[0] == "0"%><br> 
-<%else%>
-<%=n1%>
-<%end%>
-</p>
+	 <%=upd_hash%>
+
 
 <form method="post" action="back">
+	<%=f_name%> <%=l_name%> 
+
+  
+
+
+
+
+
+
+<body onload = "rando()">
+
+
+  <form method="post" action="back"> 
 	<input type="hidden" name="f_name" value="<%=f_name%>">
 	<input type="hidden" name="l_name" value="<%=l_name%>">
 	
 	<input type="submit" value="Again?">
 </form>
+</body>
+</html>

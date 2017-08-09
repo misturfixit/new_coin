@@ -3,7 +3,7 @@
 
 def changeup(monies)
 
-	act_chnge = {quarter: 0, dime: 0, nikkel: 0, penny: 0}	
+	act_chnge = {quarters: 0, dimes: 0, nickel: 0, pennies: 0}	
 
 	change = {qtr: 25, dim: 10, nikk: 5, pen: 1}		
 
@@ -13,32 +13,48 @@ def changeup(monies)
 monies
 	if monies >= change[:qtr] 
 			monies -= 25
-		act_chnge[:quarter] += 1
+		act_chnge[:quarters] += 1
 		 	 
 	elsif monies >= change[:dim]
 			monies -= 10
-		act_chnge[:dime] += 1
+		act_chnge[:dimes] += 1
 		
 	elsif monies >= change[:nikk]
 			monies -= 5 
-		act_chnge[:nikkel] += 1
+		act_chnge[:nickel] += 1
 		
 	else monies >= change[:pen]
 			monies -= 1
-		act_chnge[:penny] += 1						
+		act_chnge[:pennies] += 1
 	end
 
   end
+ p act_chnge
  act_chnge
 end
 
-def hashsmasher(key, value)
-	"#{value} #{key}"
 
-end
-
-def separate(arr)
-	if arr.any?
-		arr.pop
+def hashsmasher(myhash)
+	change = ""
+	myhash.each do |key, value|
+		if key == :quarters && value ==1
+			key = :quarter
+		end
+		if key == :dimes && value ==1
+	 		key = :dime
+	 	end	
+		if key == :nickel && value ==1
+	 		key = :nickel
+	 	end	
+	 	if key == :pennies && value ==1
+	 		key = :penny
+	 	end	
+	 	if value > 0 
+			change << value.to_s + "   " +  key.to_s  + "<br>"
+		end	
 	end
+
+	change
+
 end
+

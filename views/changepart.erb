@@ -1,8 +1,32 @@
-<h3>How much we changin boss</h3><%=f_name%><%=l_name%>
+<h3>How much we changin boss</h3><%=f_name%> <%=l_name%>
+
+
+
+<script>
+	
+var	d = new Date();
+
+function myfunc(){
+	
+	alert(d);
+	document.getElementById("newdate").value = d;
+}	
+
+</script>
+
+
+
+
+
 
 <form method= "post" action ="change">
 <input type="number" name="monies" required><br>
 <input type="hidden" name="f_name" value="<%=f_name%>">
 <input type="hidden" name="l_name" value="<%=l_name%>">	
-<input type="submit" value="!KaChing!">
+
+Submit?<br>
+<input type="submit" onclick="myfunc()" value="!KaChing!">
+<input type="hidden" name="new_date" id= "newdate">
 </form> 
+
+

@@ -1,12 +1,18 @@
 .color{
 	color: silver;
 }
+.size{
+	font-size: 3em;
+	font-weight: 22px;
+}
+w3-container{
+  text-align: center;
+  align-content: center; 
+}
 
-
-h1{  
-  margin-left: 50rem;
-  text-align: center; 
-  color: ; 
+h1{ 
+  margin-left: 35%;
+  color: darkred; 
   width: 800px;
   height: 120px;
   padding: 15px;
@@ -18,6 +24,7 @@ h1{
 }
 w3-bar-item w3-button{
 	color: teal;
+	align-content: center;
 }
 w3-bar {
   color: lightgrey;			
@@ -26,13 +33,13 @@ w3-bar {
 }
 h2{ 
   width: 600px;
-  height: 180px;
+  height: 80px;
   padding: 15px;	
-  margin-right: 550px;	
-  text-align: center;
-  width: 200px;
-  height: 60px; 
+  margin-right: center;	
   background-color: green;
+}
+h3{
+	color: darkred;
 }
 .change{
 	background-image: url(/photos/mossy.jpg);
@@ -41,10 +48,21 @@ h2{
 	color: blue;
 	font-size: 2rem
 }
-body{
+/*body{
+  
   text-align: center;  
   align-content: center;
   background-image: url(/photos/vulcan.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}*/
+h4{
+	width: 800px;
+  height: 120px;
+  text-align: center;  
+  align-content: center;
+  background-image: url(/photos/.jpg);
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
